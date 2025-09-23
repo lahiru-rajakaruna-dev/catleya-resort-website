@@ -1,11 +1,225 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Carousel from "../components/Caraousel";
+import H1 from "../components/H1";
+import H2 from "../components/H2";
+import H3 from "../components/H3";
+import Navigation from "../components/Navigation";
+import Section from "../components/Section";
+import SideMenu from "../components/SideMenu";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <header class="w-full h-fit">
+    <Navigation />
+  </header>
+
+  <section
+    id="hero"
+    class="relative z-0 w-full h-[800px] overflow-hidden"
+  >
+    <img
+      src="/property-images/front-entry.png"
+      alt="catleya resort"
+      class="absolute z-10 bottom-0 right-0 aspect-video object-cover w-full h-auto bg-yellow-100 object-bottom-right"
+    />
+    <div class="absolute z-20 inset-0 bg-black/40"></div>
+    <div class="absolute z-30 top-1/4 left-1/12 w-fit h-fit">
+      <H1 classes="!text-6xl text-white"> Catleya Family Resort</H1>
+      <H2 classes="!text-4xl text-white !font-normal"
+        >Rest, Relax, Dine and Be Ready</H2
+      >
+      <div>
+        <button class="btn btn-lg">
+          Call Reservation
+          <p>+9425 345 9988</p>
+        </button>
+      </div>
+    </div>
+    <!-- <Carousel /> -->
+  </section>
+
+  <div
+    class="w-[80%] h-fit mb-20 mx-auto flex flex-row items-start justify-between"
+  >
+    <SideMenu />
+    <main class="flex-3 h-fit">
+      <Section id="section-1">
+        <div class="mb-8">
+          <H1>Welcome to Catleya Family Resort</H1>
+          <H2>Rest, Relax and Dine</H2>
+        </div>
+        <div class="w-full h-80 flex flex-row items-start justify-start gap-3">
+          <p class="w-1/2 max-w-[80ch]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            optio ad debitis nihil molestias illo. Explicabo dolor, voluptas
+            cumque qui magni fugiat nam. Molestias eaque quas vero
+            necessitatibus veniam quia!
+          </p>
+          <aside class="relative w-1/2 h-full">
+            <img
+              src="/public/property-images/front-entry-03.png"
+              alt="image1"
+              class="absolute top-0 right-0 aspect-[4/3] w-[350px] h-auto border-4 border-gray-800 shadow-lg bg-white"
+            />
+            <img
+              src="/public/property-images/building-front.png"
+              alt="image2"
+              class="absolute top-22 right-20 aspect-[4/3] w-[350px] h-auto border-4 border-gray-800 shadow-lg bg-white"
+            />
+          </aside>
+        </div>
+      </Section>
+
+      <Section id="section-2">
+        <div class="mb-8">
+          <H2>We provide warm hospitality for pilgrims</H2>
+        </div>
+        <div class="flex flex-row items-start justify-between gap-4">
+          <img
+            src="/public/property-images/offering-preparation-area.png"
+            alt="image"
+            class="aspect-[4/3] object-cover w-1/2 border-4 border-gray-800 bg-white"
+          />
+          <p class="w-1/2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            nesciunt repudiandae sunt ducimus dolorem facere! Praesentium
+            voluptatibus deserunt incidunt, sequi illo qui beatae. Iste
+            consectetur magni, omnis suscipit quam rem.
+          </p>
+        </div>
+      </Section>
+
+      <Section id="section-3">
+        <div class="mb-8">
+          <H2> We have AC & Non-AC Rooms for Lowest Prices</H2>
+        </div>
+        <div class="relative w-full h-[600px]">
+          <img
+            src=""
+            alt=""
+            srcset=""
+            class="absolute top-1/2 left-1/2 translate-x-[60%] translate-y-[10%] aspect-square w-[200px] border-4 border-gray-800 bg-yellow-100 shadow-md"
+          />
+          <img
+            src=""
+            alt=""
+            srcset=""
+            class="absolute top-1/2 left-1/2 -translate-x-[0%] -translate-y-[135%] aspect-video w-[300px] border-4 border-gray-800 bg-green-100 shadow-md"
+          />
+          <img
+            src=""
+            alt=""
+            srcset=""
+            class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[60%] aspect-video w-[350px] border-4 border-gray-800 bg-orange-100 shadow-md"
+          />
+          <img
+            src=""
+            alt=""
+            srcset=""
+            class="absolute top-1/2 left-1/2 -translate-x-[160%] -translate-y-[80%] aspect-square w-[250px] border-4 border-gray-800 bg-purple-100 shadow-md"
+          />
+          <img
+            src=""
+            alt=""
+            srcset=""
+            class="absolute top-1/2 left-1/2 -translate-x-[90%] translate-y-[50%] aspect-video w-[300px] border-4 border-gray-800 bg-green-100 shadow-md"
+          />
+        </div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error,
+          itaque rem nulla ad explicabo optio consequatur voluptate. Veniam
+          impedit voluptate nam reiciendis quam fuga recusandae earum aut.
+          Labore, quibusdam exercitationem.
+        </p>
+      </Section>
+
+      <Section id="section-4">
+        <div class="mb-8">
+          <H2>You can relax and dine with your family without any wrroies</H2>
+        </div>
+        <div
+          class="flex-1 flex flex-row items-stretch justify-normal overflow-hidden"
+        >
+          <img
+            src="/public/property-images/dinning-area.png"
+            alt=""
+            class="flex-1/2 aspect-square object-cover w-1/2 h-auto"
+          />
+          <img
+            src="/public/property-images/dinning-area-tv.png"
+            alt=""
+            class="flex-1/2 aspect-square object-cover w-1/2 h-auto"
+          />
+        </div>
+      </Section>
+
+      <Section id="section-4">
+        <div class="w-[60ch] mb-8">
+          <H2>
+            3 Minutes Away from Anuradhapura Town, in a Secluded Calm
+            Environment</H2
+          >
+        </div>
+        <div class="w-full flex flex-row items-start justify-between">
+          <div class="flex-1 card card-md">
+            <div class="card-body">
+              <img
+                src=""
+                alt=""
+                class="aspect-[4/3] w-full h-auto border-4 border-gray-800 shadow-md bg-green-200"
+              />
+              <H3
+                classes="card-title"
+                }
+              >
+                Low Crowd, Low Noise
+              </H3>
+              <p class="">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum
+                debitis mollitia atque ullam dicta pariatur nemo, perferendis
+                quod fugiat velit dolorem reiciendis sed deleniti sint nulla
+                error natus ex quas.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex-1 card card-md">
+            <div class="card-body">
+              <img
+                src=""
+                alt=""
+                class="aspect-[4/3] w-full h-auto border-4 border-gray-800 shadow-md bg-green-200"
+              />
+              <H3 classes="card-title">Calm Natural Environment</H3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex,
+                accusamus commodi officia veritatis quisquam voluptates nihil
+                sapiente autem rerum adipisci.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex-1 card card-md">
+            <div class="card-body">
+              <img
+                src=""
+                alt=""
+                class="aspect-[4/3] w-full h-auto border-4 border-gray-800 shadow-md bg-green-200"
+              />
+              <H3 classes="card-title">Prepare Your Offerings</H3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam cupiditate, officia sint nobis praesentium vero? At
+                totam aliquid maxime reprehenderit atque qui molestiae et quasi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+    </main>
+  </div>
+  <footer>
+    <div></div>
+  </footer>
 </Layout>
