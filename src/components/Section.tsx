@@ -6,7 +6,7 @@ export default function Section(props: PropsWithChildren<{ id: string }>) {
       id={props.id}
       className="w-full h-fit"
     >
-      <div className="w-full h-fit pt-8">{props.children}</div>
+      <div className="w-full h-fit pt-12 pb-36">{props.children}</div>
     </section>
   );
 }
